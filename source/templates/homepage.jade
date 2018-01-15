@@ -1,0 +1,23 @@
+extend default
+
+block content
+  p.
+    Please fill in the time you'd like to set your alarm at below
+
+  div
+  form(action='/setalarm',method='post')
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='hour') hour
+           input(id='hour',type='number',value='',placeholder='00',name='hour')
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='min') minutes
+           input(id='min',type='number',value='',placeholder='00',name='min')
+    div(data-role='fieldcontain')
+      fieldset(data-role='controlgroup')
+        label(for='msg') message
+           input(id='msg',type='text',value='',placeholder='',name='msg')
+    
+    div(data-role='fieldcontain')   
+      input(type='submit',value='Set alarm',data-transition='fade', data-theme='c')
